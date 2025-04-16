@@ -7,8 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body
+    class="bg-sky-950 text-gray-200 h-screen flex items-center justify-center"
+  >
+    <main class="w-80 bg-slate-950 rounded-xl shadow border-b border-gray-800">
+      <h1 class="text-2xl text-center font-extrabold py-4">Weather App</h1>
+      <div class="p-6 flex flex-col gap-2">
+        <input
+          class="py-2 text-center bg-slate-800 placeholder:text-gray-100 rounded"
+          type="text"
+          placeholder="Enter City Name"
+        />
+        <h6
+          class="w-full text-center leading-0.5 border-b border-neutral-300 my-2.5"
+        >
+          <span class="text-center px-1 bg-slate-950">or</span>
+        </h6>
+        <button
+          class="text-white cursor-pointer font-bold rounded-sm py-2 border-0 bg-sky-600 hover:bg-sky-500 transition-colors"
+        >
+          Get Device Location
+        </button>
+      </div>
+    </main>
+    <div
+      class="fixed top-0 left-0 w-full h-full bg-black/30 transition-opacity duration-300 ease-linear flex items-center justify-center opacity-0 invisible"
+    >
+      <div class="w-80 bg-slate-950 rounded-xl">
+        <div class="flex gap-2 items-center px-4 py-3 border-b border-gray-800">
+          <img src="/other-icons/back.svg" class="size-8" alt="back" />
+
+          <h2 class="font-bold text-xl">Weather App</h2>
+        </div>
+        <div class="flex flex-col items-center pb-4">
+          <img
+            id="modal-img"
+            src="/weather-icons/cloudy-day-3.svg"
+            alt="weather"
+            class="w-1/2"
+          />
+          <h1 id="modal-tmp" class="text-4xl font-extrabold mb-2">13℃</h1>
+          <h5 id="modal-description" class="text-xl font-bold mb-2">
+            Broken Clouds
+          </h5>
+          <h6 id="modal-location" class="font-bold">Kathmandu, Nepal</h6>
+        </div>
+        <div class="border-t border-gray-800 flex">
+          <div
+            class="py-2 border-e border-gray-800 w-1/2 flex gap-2 justify-center items-center"
+          >
+            <img
+              src="/other-icons/temperature.svg"
+              class="size-6"
+              alt="feels-like"
+            />
+            <div class="flex flex-col justify-center">
+              <span id="modal-feels-like" class="font-bold">17℃</span>
+              <span class="text-xs font-bold">Feels like</span>
+            </div>
+          </div>
+          <div class="py-2 w-1/2 flex gap-2 justify-center items-center">
+            <img src="/other-icons/water.svg" class="size-6" alt="humidity" />
+            <div class="flex flex-col justify-center font-bold">
+              <span id="modal-humidity">84%</span>
+              <span class="text-xs">Humidity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
