@@ -31,11 +31,14 @@
       </div>
     </main>
     <div
+      id="modal"
       class="fixed top-0 left-0 w-full h-full bg-black/30 transition-opacity duration-300 ease-linear flex items-center justify-center opacity-0 invisible"
     >
       <div class="w-80 bg-slate-950 rounded-xl">
         <div class="flex gap-2 items-center px-4 py-3 border-b border-gray-800">
-          <img src="/other-icons/back.svg" class="size-8" alt="back" />
+          <button id="back-button" class="cursor-pointer">
+            <img src="/other-icons/back.svg" alt="back" class="size-8" />
+          </button>
 
           <h2 class="font-bold text-xl">Weather App</h2>
         </div>
