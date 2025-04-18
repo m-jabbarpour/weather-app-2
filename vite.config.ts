@@ -32,6 +32,10 @@ export default defineConfig({
           },
         ],
       },
+      workbox: {
+        globDirectory: "./dist/",
+        globPatterns: ["**/*.{js,css,html,svg}"],
+      },
     }),
   ],
 });
