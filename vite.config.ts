@@ -23,12 +23,12 @@ export default defineConfig({
           {
             src: "/app-icons/icon-48.svg",
             sizes: "48x48",
-            type: "image/svg",
+            type: "image/svg+xml",
           },
           {
             src: "/app-icons/icon-192.svg",
             sizes: "192x192",
-            type: "image/svg",
+            type: "image/svg+xml",
           },
         ],
       },
